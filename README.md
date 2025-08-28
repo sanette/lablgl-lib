@@ -1,4 +1,4 @@
-* Legacy openGL bindings for OCaml
+# Legacy openGL bindings for OCaml
 
 This is a fork of [lablgl](https://github.com/garrigue/lablgl)
 stripped of TOGL and GLUT (no code modification).
@@ -10,7 +10,7 @@ with `tsdl| (the SDL2 bindings).
 
 `lablgl` only binds very old openGL 1.x, and some of 2.0 (shaders). For more recent openGLs, see [tgls](https://github.com/dbuenzli/tgls)
 
-* How to use this one instead of the original `lablgl`?
+# How to use this one instead of the original `lablgl`?
 
 ```
 opam pin add https://github.com/sanette/lablgl-lib.git
