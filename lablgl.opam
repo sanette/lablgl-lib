@@ -1,0 +1,35 @@
+opam-version: "2.0"
+name: "lablgl"
+version: "1.07-lib"
+         
+maintainer: "garrigue@math.nagoya-u.ac.jp"
+authors: ["Jacques Garrigue et al., Nagoya University"]
+homepage: "https://github.com/garrigue/lablgl"
+bug-reports: "https://github.com/garrigue/lablgl/issues"
+dev-repo: "git+https://github.com/garrigue/lablgl.git"
+license: "BSD-3-Clause"
+build: [
+  ["cp" "Makefile.config.ex" "Makefile.config"]
+  ["cp" "Makefile.config.osx" "Makefile.config"] {os = "macos"}
+  ["mkdir" "-p" bin]
+  [make "INSTALLDIR=%{lib}%/lablgl" "lib"]
+  [make "INSTALLDIR=%{lib}%/lablgl" "libopt"] {ocaml:native}
+]
+install: [
+  [make "install" "-C" "src" "BINDIR=%{bin}%" "INSTALLDIR=%{lib}%/lablgl" "DLLDIR=%{lib}%/stublibs"]
+  ["cp" "META" "%{lib}%/lablgl/"]
+]
+remove: [
+  ["rm" "-rf" "%{lib}%/lablgl"]
+]
+depends: [
+  "ocaml" {>= "4.14"}
+  "ocamlfind" {>= "1.2.1"}
+  "camlp-streams" {build}
+]
+depexts: [
+  ["mesa-common-dev"] {os-family = "debian"}
+]
+synopsis: "Interface to OpenGL"
+description: """
+Interface between OCaml and OpenGL."""

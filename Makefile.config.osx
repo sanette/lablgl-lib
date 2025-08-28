@@ -10,19 +10,6 @@
 #CAMLC = ocamlc.opt
 #CAMLOPT = ocamlopt.opt
 
-# Where to put the lablgl script
-BINDIR = /usr/local/bin
-
-# Where to find Tcl/Tk headers
-# This must be the same version as for LablTk
-# On OSX, Togl works only with the X11 version of Tk
-# Here we use the X11 version of tk and mesa installed by macports
-# While we only use the GLX part of mesa, the libGL.dylib in
-# /usr/X11/lib is not compatible with macports.
-TKINCLUDES = -I/opt/local/include
-# Libs for Togl
-TKLIBS = -L/opt/local/lib -lGL -lXmu
-
 # Where to find OpenGL/Mesa headers and libraries
 GLINCLUDES =
 GLLIBS = -framework OpenGL 
