@@ -1,5 +1,0 @@
-Here are a few examples for LablGL.  They can be run with the 
-lablglut toplevel.  For example:
-
-  lablglut gears.ml
-
