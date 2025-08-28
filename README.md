@@ -6,7 +6,9 @@ stripped of TOGL and GLUT, and with an `opam` file (no other code modification).
 The idea is to make maintenance easier with less dependencies.
 
 It can be used as a pure library, and creating contexts can be done
-with `tsdl| (the SDL2 bindings).
+with [tsdl](https://github.com/dbuenzli/tsdl) (the SDL2 bindings).
+
+## Warning: old!
 
 `lablgl` only binds very old openGL 1.x, and some of 2.0 (shaders). For more recent openGLs, see [tgls](https://github.com/dbuenzli/tgls)
 
