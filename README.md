@@ -6,7 +6,8 @@ stripped of TOGL and GLUT, and with an `opam` file (no other code modification).
 The idea is to make maintenance easier with less dependencies.
 
 It can be used as a pure library, and creating contexts can be done
-with [tsdl](https://github.com/dbuenzli/tsdl) (the SDL2 bindings).
+with [tsdl](https://github.com/dbuenzli/tsdl) (the SDL2 bindings), or
+(maybe) with [lablgtk](https://github.com/garrigue/lablgtk).
 
 ## Warning: old!
 
@@ -23,7 +24,9 @@ opam pin add https://github.com/sanette/lablgl-lib.git
 opam install lablgl.1.07-lib
 ```
 
-For instance, this allows you to install [oplot](https://github.com/sanette/oplot) with
+For instance, this allows you to then install
+[oplot](https://github.com/sanette/oplot) with
+
 ```
 opam install oplot
 ```
