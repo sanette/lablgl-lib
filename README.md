@@ -1,7 +1,7 @@
 # Legacy openGL bindings for OCaml
 
 This is a fork of [lablgl](https://github.com/garrigue/lablgl) simply
-stripped of TOGL and GLUT (no code modification).
+stripped of TOGL and GLUT, and with an `opam` file (no other code modification).
 
 The idea is to make maintenance easier with less dependencies.
 
@@ -16,8 +16,9 @@ This library installs a package with the same name `lablgl` so it will
 automatically override any previously reference to `lablgl`. Simply
 do:
 
-``` opam pin add https://github.com/sanette/lablgl-lib.git opam
-install lablgl.1.07-lib
+```
+opam pin add https://github.com/sanette/lablgl-lib.git
+opam install lablgl.1.07-lib
 ```
 
 For instance, this allows you to install [oplot](https://github.com/sanette/oplot) with
